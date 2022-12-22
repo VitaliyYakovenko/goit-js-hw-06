@@ -17,14 +17,18 @@ function onSubmitForm(event) {
     const email = valueInp.email.value;
 
     const password = valueInp.password.value;
-  
+   
+     
     if (email === "" || password === "") {
         alert("Все поля должны быть заполненны.")
     }
-    const formData = new FormData(event.currentTarget);
-    formData.forEach((value, name) =>{
-        return console.log(`${name}: ${value}`)
-    })
 
+    const formData = {
+        email,
+        password,
+    };
+    
+    console.log(formData);
+    
    formEl.reset()
 }  
